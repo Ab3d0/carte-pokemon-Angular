@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="card">
+        <div id="inside" [style.background-color]="backgroundColor">
+            <header>
+                <div class="left">
+                    <div id="name">{{monster.name}}</div>
+
+                </div>
+                <div class="right">
+                    <div id="hp">{{monster.hp}} HP</div>
+                    <img class="energy" [src]="monsterTypeIcon">
+                </div>
+            </header>
+
+            <figure id="art">
+                <img [src]="monster.image">
+                <figcaption>{{monster.figureCaption}}</figcaption>
+            </figure>
+            <div id="capacities">
+                <div class="capacity">
+                    <div class="main">
+                        <div class="cost">
+                            <img class="icon energy" [src]="monsterTypeIcon">
+                            <img class="icon energy" [src]="monsterTypeIcon">
+                            
+                        </div>
+                        <div class="name">{{monster.attackName}}</div>
+                        <div class="damage">{{monster.attackStrength}}</div>
+
+                    </div>
+                    <div class="description">
+                        {{monster.attackDescription}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

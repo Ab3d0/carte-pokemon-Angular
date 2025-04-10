@@ -1,0 +1,58 @@
+<!--
+
+<app-search-bar 
+(searchButtonClicked)="increaseCount()"
+[search]="search"
+(searchChange)="search = $event" ></app-search-bar>
+Search {{search}} <br />
+Count: {{count}} 
+
+<div class="cart-list">
+    <app-playing-cart></app-playing-cart>
+    <app-playing-cart [monster]="monster1"></app-playing-cart>
+    <app-playing-cart [monster]="monster2"></app-playing-cart>
+</div>
+
+-->
+<!-- 
+<button (click)="toggleMonster()">Toggle Monster</button>
+<div id="card-list">
+    <app-playing-cart [monster]="selectedMonster()"></app-playing-cart>
+</div>
+
+-->
+<!--
+<div class="page-layout">
+    <app-search-bar [(search)]="search"></app-search-bar>
+
+    
+        @if(filteredMonsters().length > 0){
+         
+            <div class="center">Trouvé {{filteredMonsters().length}} monsters</div>
+        } 
+
+  
+    <div id="card-list">
+        @for (monster of filteredMonsters() ; track monster){
+            <app-playing-cart [monster]="monster"></app-playing-cart>
+
+           
+        } @empty {
+            <div class= "center">Pas de monstre trouvé</div> 
+        }
+        
+      
+    </div>
+
+    <div class="center"><button (click)="addMonster()">Ajouter un Monstre</button></div>
+
+    <div class="center"><button (click)="resetMonsters()">Réinitialiser les monstres</button></div>
+
+
+   
+</div>
+  
+
+-->
+
+<router-outlet></router-outlet>

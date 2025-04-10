@@ -1,0 +1,30 @@
+<div class="page-layout">
+    <app-search-bar [(search)]="search"></app-search-bar>
+
+    
+        @if(filteredMonsters().length > 0){
+         
+            <div class="center">Trouvé {{filteredMonsters().length}} monsters</div>
+        } 
+
+  
+    <div id="card-list">
+        @for (monster of filteredMonsters() ; track monster){
+            <app-playing-cart [monster]="monster" (click)="openMonster(monster)"></app-playing-cart>
+
+           
+        } @empty {
+            <div class= "center">Pas de monstre trouvé</div> 
+        }
+        
+      
+    </div>
+
+    <div class="center"><button (click)="addMonster()">Ajouter un Monstre</button></div>
+
+    <div class="center"><button (click)="resetMonsters()">Réinitialiser les monstres</button></div>
+
+
+   
+</div>
+  
